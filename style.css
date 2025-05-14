@@ -1,0 +1,17 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira Code', monospace;
+  overflow: hidden;
+}
+#ui {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+input, button {
+  font-size: 16px;
+  padding: 10px;
+}
