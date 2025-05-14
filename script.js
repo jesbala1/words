@@ -1,18 +1,16 @@
 let bgColor;
 let energy = 0.5;
-let rageSound, dreamSound, staticSound;
+let rageSound, dreamSound;
 
 function preload() {
   soundFormats('mp3');
   rageSound = loadSound('rage.mp3');
   dreamSound = loadSound('dream.mp3');
-  staticSound = loadSound('static.mp3');
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   bgColor = color(255);
-
   document.getElementById("submitBtn").addEventListener("click", submitWord);
 }
 
@@ -36,10 +34,6 @@ function submitWord() {
     bgColor = color(255, 50, 50);
     energy = 1.5;
     if (rageSound.isLoaded()) rageSound.play();
-  } else if (word.includes("static")) {
-    bgColor = color(100);
-    energy = 0.8;
-    if (staticSound.isLoaded()) staticSound.play();
   } else {
     bgColor = color(230);
     energy = 0.6;
